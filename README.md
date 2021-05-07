@@ -59,12 +59,10 @@ Now let's do one exercise to understand what we have learnt so far
 
 Try this out by your own :smile: and after completing please verify from below :point_down: <details>
  <summary><b>Answer</b></summary>
- <p>```mkdir test  
- cd test  
- touch source.txt  
- vi source.txt  
- cat source.txt  
- ln hardlink.txt hlink```</p>
+ 
+![commands](https://user-images.githubusercontent.com/43695392/117485099-9d547080-af85-11eb-8e35-1b491d6d1d88.JPG)
+
+ 
 </details>
 
 </details>
