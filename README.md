@@ -24,27 +24,26 @@ Non-standard directories  |	Directories which do not come under standard FHS, eg
 
 Command  |  Description  |  Example
 ------------- | ------------- | -------------
-mkdir  | 	Make a directory at a particular path
-rmdir  |  used to remove an empty directory  
-touch *file-name*  |  to create file
-~     |  Indicates the home directory.
-echo  |  It inserts text in the given file
-clear |  Clears information on the display screen to provide a blank slate.
-pwd   | 	Print your working directory
-ls    |	List the contents of a particular path
-cd    |	 Move to a particular path or change directory
-cd ~  |  Return to home directory.
-cd /  |  To shift to root user 
-ls -l |  shows all the links with the link column shows number of links.
-cat   |  To display content of the given file
-cp -r |  To copy all files recursively.
-mv    |  To rename the file 
-rm    |  To remove file
-uname |  To check current version of Linux.
-head  |  To get info about top files instead of all files.
-tail  |  To get info about last files instead of all files.
-ping  |  To check  working of network
-vi    |  Text editor ,press i to insert then press ESC to return & wq to save and exit .
+pwd   | 	Returns current working directory  |  *pwd*
+ls    |	List the contents of a particular path  |  *ls*
+mkdir  | 	Make a directory at a current directory  |  *mkdir folder*
+touch *file-name*  |  to create file  |  *touch abc.txt*
+vi *filename*  |  Text editor ,press i to insert then press ESC to return & wq to save and exit  |  *vi abc.txt*
+cat *filename*  |  To display content of the given file  |  *cat abc.txt*
+rmdir *empty-folder*  |  used to remove an empty directory  |  *rmdir folder* 
+cd    |	 Move to a particular path or change directory  |  *cd Desktop, cd ~, cd /*
+~     |  Indicates the home directory  |  *~*
+cp *src* *dest* |  To copy all files recursively  |  *cp abc.txt xyz.txt*
+mv    |  To move one or more files or directories from one place to anothe   |  *mv abc.txt xyz.txt*
+rm    |  To remove file   |  *rm xyz.txt*
+uname |  To check current version of Linux  |  *uname*
+df    |  It is used to display disk space used in the filesystem  | *df*
+man *command* |  This command used to display description of the command specified | *man touch*
+head *filename*  |  To get info about first part from mentioned file  |  *head abc.txt*
+tail *filename* |  To get info about last part from mentioned file   |  *tail abc.txt*
+ping *ip/url* |   to check whether a network is available  |  *ping google.com*
+
+clear |  Clears all text from terminal window  |  *clear*
 </details>
 
 <details>
