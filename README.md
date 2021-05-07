@@ -5,7 +5,7 @@ In this repo you will find all basics of linux. This tutorial contains collapsib
 <details>
   <summary><h3>Linux file system</h3></summary>
   
-  In Linux, all the files or directories are part of a single root directory. The main file in the linux is referred as the *root (/)* file.  
+  #### In Linux, all the files or directories are part of a single root directory. The main file in the linux is referred as the *root (/)* file.  
   
   ![Linux file System](https://computingforgeeks.com/wp-content/uploads/2020/02/linux-file-system-hierarchy-1-1024x339.png?ezimgfmt=ng:webp/ngcb18)
   
@@ -42,18 +42,38 @@ man *command* |  This command used to display description of the command specifi
 head *filename*  |  To get info about first part from mentioned file  |  *head abc.txt*
 tail *filename* |  To get info about last part from mentioned file   |  *tail abc.txt*
 ping *ip/url* |   to check whether a network is available  |  *ping google.com*
-
 clear |  Clears all text from terminal window  |  *clear*
+
+- - - -
+#### Hard links and soft links  
+To know what are they plz [click here](https://www.geeksforgeeks.org/soft-hard-links-unixlinux/)  
+
+Now let's do one exercise to understand what we have learnt so far  
+> Example:  
+> * Create an empty directory called `test`.
+> * Change to the `test` directory.
+> * Create a new file named ‘source.txt’ and add content to the file - `Hello World`.
+> * View the contents of the file.
+> * Create a hard link to the file named `hardlink.txt` and compare the inode with the file `softlink.txt`.
+> * Now create a softlink of the the file named `softlink.txt` and compare the inode with file `source.txt`
+
+Try this out by your own :smile: and after completing please verify from below :point_down: <details>
+ <summary><b>Answer</b></summary>
+ <p>```mkdir test  
+ cd test  
+ touch source.txt  
+ vi source.txt  
+ cat source.txt  
+ ln hardlink.txt hlink```</p>
+</details>
+
 </details>
 
 <details>
-  <summary>Users & Groups</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+  <summary><h3>Users & Groups</h3></summary>
+ 
+ #### Linux is a multi-user system, which means that more than one person can interact with the same system at the same time. As a system administrator, you have the responsibility to manage the system’s users and groups by creating and removing users and assign them to different groups.
+ 
 </details>
 
 <details>
