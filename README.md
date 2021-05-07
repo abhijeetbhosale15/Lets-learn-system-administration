@@ -1,7 +1,7 @@
 # Lets-learn-system-administration
-In this repo you will find all basics of linux. This tutorial contains collapsible section to access particular topic. Please click on bullet infrot of the topic to deep dive into it.  
+##### In this repo you will find all basics of linux. This tutorial contains collapsible section to access particular topic, hover over the topic and click on it to deep dive into it.  
 
- ## Topic covered
+ ## Topics covered:
 <details>
   <summary><h3>Linux file system</h3></summary>
   
