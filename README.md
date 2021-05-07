@@ -1,5 +1,5 @@
 # Lets-learn-system-administration
-##### In this repo you will find all basics of linux. This tutorial contains collapsible section to access particular topic, hover over the topic and click on it to deep dive into it.  
+##### This tutorial contains collapsible section to access particular topic, hover over the topic and click on it to deep dive into it.  
 
  ## Topics covered:
 <details>
@@ -72,8 +72,63 @@ Try this out by your own :smile: and after completing please verify from below :
 <details>
   <summary><h3>Users & Groups</h3></summary>
  
- #### Linux is a multi-user system, which means that more than one person can interact with the same system at the same time. As a system administrator, you have the responsibility to manage the system’s users and groups by creating and removing users and assign them to different groups.
+ #### Linux is a multi-user system, which means that more than one person can interact with the same system at the same time. As a system administrator, you have the responsibility to manage the system’s users and groups by creating and removing users and assign them to different groups. 
  
+ #### To understand **Users and Groups** in linux first we need to understand the columns of `/etc/passwd` file 
+ 
+ ![Users and groups](https://devconnected.com/wp-content/uploads/2019/09/list-users-linux-768x415.png)
+ 
+ #### Now we will understand each columns of `/etc/passwd` one by one.
+ 
+ Column name                   |  Description
+-------------                  |  -------------
+User name                      |  It is used when user logs in.
+Encrypted password             |  An x character indicates that encrypted password is stored in /etc/shadow file.
+User ID number (UID)           |  Each user must be assigned a user ID 
+User's group ID number (GID)   |  The primary group ID (stored in /etc/group file)
+User home directory            |  The absolute path to the directory the user will be in when they log in.
+Login shell                    |  The absolute path of a command or shell (/bin/bash)
+
+- - - -
+
+#### Users
+- Users are accounts ,used to login into a system. 
+- Each user identified with unique identification number.
+- The information of users in a system are stored in /etc/passwd file. 
+- The hashed passwords for users are stored in /etc/shadow file.
+
+#### Groups
+- A group is a collection of users. 
+- To define a set of privileges like read, write, or execute permission for a given resource that can be shared among the users within the group.
+
+1. Primary Group( default group)
+   1. You can find a user’s primary group ID by viewing the contents of the your system’s `/etc/passwd` file.  
+   > cat  /etc/passwd
+   2. You can also find a user’s primary group information by using the id command.  
+   > id username
+
+2. Secondary Group-
+   1. Once the user is created with the primary group it can be added to the other groups.  >groups username
+   2. Linux system users can have a maximum of 15 secondary groups.  
+   3. A Linux system’s groups are stored in the /etc/group file.
+   4. A user can belong to zero or more secondary groups.
+
+ Command                      |   Use                                       |  Example
+-------------                 |  -------------                              | -------------
+whoami                        |  To display the username of the current use.  | *-*
+su *username*                 |  To substitute user without changing the cwd  | *su Abhijeet*
+useradd *username*            | To add a user to the system. | *useradd Abhijeet*
+userdel *username*            | To delete a user account and related files.  | *userdel Abhijeet*
+groupadd *groupname*          | To add a group to the system.| *groupadd cse*
+delgroup/groupdel *groupname* | To remove a group from the system.  | *delgroup cse*
+usermod *username* | To modify or change any attributes of a already created user account via command line  | *usermod Abhijeet*
+usermod -a -G *grpname* *username* |  To append user to the secondary group.  | *usermod -a -G cse Abhijeet*
+cat /etc/passwd | To check addition of the user | *cat /etc/passwd*
+passwd  |  To assign the password to user  | *-*
+id  |  To get data about user and its group   | *-*
+chage  |   To change user password expiry information.  | *chage -l Abhijeet*
+sudo  |  To run one or more commands as another user typically with superuser permissions.  | *-*
+
 </details>
 
 <details>
